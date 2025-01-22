@@ -5,6 +5,11 @@
 //Ставка 22% — для части дохода выше 50 млн руб. в год, или выше 4,170 тыс. руб. в месяц
 public class TaxSystem {
 
+    // Переменные для расчета зарплаты и налога
+    private double accruedSalary = 50_000; // Начисленная зарплата
+    private double tax = 0; // Сумма налога
+    private double paidSalary = 0; // Выданная зарплата
+
     // Метод для расчета налогов в зависимости от дохода
     public double calculateTax(double annualIncome) {
         double tax = 0;
@@ -22,6 +27,18 @@ public class TaxSystem {
         }
 
         return tax;
+    }
+
+    // Метод для расчета налога (без реализации)
+    public double getTax() {
+        // Реализация будет здесь
+        return 0;
+    }
+
+    // Метод для расчета зарплаты к выдаче на руки работнику (без реализации)
+    public double getPaidSalary() {
+        // Реализация будет здесь
+        return 0; // заглушка
     }
 
     public static void main(String[] args) {
